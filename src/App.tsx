@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Title from './beautifulTitle';
 import { TaskList } from './TaskList';
-import { AddTaskForm } from './addTaskForm';
+import { AddTaskForm } from './Forms/addTaskForm';
 
 //todo get rid of
 const startingList: Task[] = [];
@@ -25,8 +25,8 @@ function App() {
     setTodos(newTasks);
   };
   
-  const addTask: AddTask = (text: string) => {
-    const newTask = { text, complete: false, category: null};
+  const addTask: AddTask = (text: string, category: null | string) => {
+    const newTask = { text, complete: false, category};
     setTodos([...tasks, newTask]);
   };
   return  <> 
