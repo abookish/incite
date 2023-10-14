@@ -6,27 +6,14 @@ import { TaskList } from './TaskList';
 import { AddTaskForm } from './addTaskForm';
 
 //todo get rid of
-const demoTasks: Task[] = [
-  {
-    text: 'Make nice little sections',
-    complete: false,
-    value: 4,
-    category: null
-  },
-  {
-    text: 'Go through little tutorial',
-    complete: true,
-    value: 2,
-    category: null
-  },
-];
+const startingList: Task[] = [];
 
 function App() { 
   
-  const [tasks, setTodos] = useState(demoTasks);
+  const [tasks, setTodos] = useState(startingList);
 //toggle function todo abstract
   const toggleTodo = (selectedTodo: Task) => {
-    const newTasks = tasks.map((task) => {
+    const newTasks = tasks.map((task: Task) => {
       if (task === selectedTodo) {
         return {
           ...task,
@@ -43,7 +30,7 @@ function App() {
     setTodos([...tasks, newTask]);
   };
   return  <> 
-   <Title title='TODO' subtitle = 'submerge  in the task'/>
+   <Title title="let's motivate" subtitle = 'submerge  in the task'/>
     <TaskList tasks={tasks} toggleTodo={toggleTodo} />
     <AddTaskForm addTask={addTask}/>
   </>
