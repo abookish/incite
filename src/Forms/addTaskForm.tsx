@@ -1,42 +1,29 @@
-import React, { useState, FC } from 'react';
-
-
+import React, { useState } from 'react';
 interface Props {
     addTask: AddTask;
   }
-  interface noProps {
-  }
-const TaskTextBox: FC<noProps> = ({}) => { //todo new file for these
+
+
+export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
   const [text, setText] = useState('');
+  const [category, setCategory] = useState('');
 
   return (
-    <input type="text" 
+    <form>
+     <input type="text" //todo get smarter then asbtract this
         id ='taskTextBox'
         value={text}
         onChange={(event) => {
           setText(event.target.value);
         }}/>
-  );
-};
-const TaskCategorySelector: FC<noProps> = ({}) => { //todo actual choices
-  const [category, setCategory] = useState('');
-
-  return (
-    <select 
+     <select 
       id='taskCategorySelector'
       value = {category}
       onChange={(event) => {
         setCategory(event.target.value);
       }}
   ></select>
-  );
-};
-const FormSubmitButton: FC<Props> = ({addTask}) => {
-  const [category, setCategory] = useState('');
-  const [text, setText] = useState('');
-
-  return (
-    <button type="submit" 
+     <button type="submit" 
       id='taskFormSubmit'
       onClick={(event) => {
         event.preventDefault();
@@ -44,19 +31,6 @@ const FormSubmitButton: FC<Props> = ({addTask}) => {
         setText('');
        }}
       >Then do it </button>
-  );
-};
-
-
-export default TaskTextBox; 
-
-export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
- 
-  return (
-    <form>
-     <TaskTextBox/>
-     <TaskCategorySelector/>
-     <FormSubmitButton addTask={addTask}/>
       
     </form>
   );

@@ -25,8 +25,8 @@ function App() {
     setTodos(newTasks);
   };
   
-  const addTask: AddTask = (text: string, category: null | string) => {
-    const newTask = { text, complete: false, category};
+  const addTask: AddTask = (text: string) => {
+    const newTask = { text, complete: false};
     setTodos([...tasks, newTask]);
   };
   return  <> 
