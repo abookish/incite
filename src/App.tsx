@@ -5,7 +5,14 @@ import Title from './beautifulTitle';
 import { TaskList } from './TaskList';
 import { AddTaskForm } from './Forms/addTaskForm';
 import { getCategoryList, CategoryDiv, categoryNames } from './taskCategories';
-
+/*app todos:
+-hint text for text box
+-star toggle
+-star section
+-cat names
+-app icon
+-make it pretty
+*/
 //todo get rid of
 const startingList: Task[] = [];
 
@@ -32,7 +39,7 @@ function App() {
   };
   return  <> 
    <Title title="let's motivate" subtitle = 'submerge  in the task'/>
-    <CategoryDiv tasks={tasks} categoryOptions={categoryNames} toggleTodo={toggleTodo}/>
+    <CategoryDiv tasks={tasks} toggleTodo={toggleTodo}/>
     <AddTaskForm addTask={addTask}/>
   </>
 }
