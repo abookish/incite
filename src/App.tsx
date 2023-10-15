@@ -4,7 +4,7 @@ import './App.css';
 import Title from './beautifulTitle';
 import { TaskList } from './TaskList';
 import { AddTaskForm } from './Forms/addTaskForm';
-import { getCategoryList } from './taskCategories';
+import { getCategoryList, CategoryDiv, categoryNames } from './taskCategories';
 
 //todo get rid of
 const startingList: Task[] = [];
@@ -32,9 +32,7 @@ function App() {
   };
   return  <> 
    <Title title="let's motivate" subtitle = 'submerge  in the task'/>
-    <TaskList tasks={tasks} toggleTodo={toggleTodo} />
-    "only category 2"
-    <TaskList tasks={getCategoryList("category2",tasks)} toggleTodo={toggleTodo} />
+    <CategoryDiv tasks={tasks} categoryOptions={categoryNames} toggleTodo={toggleTodo}/>
     <AddTaskForm addTask={addTask}/>
   </>
 }
