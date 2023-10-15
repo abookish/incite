@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { categoryNames } from '../taskCategories';
 interface Props {
     addTask: AddTask;
   }
 
-const categoryNames = ['category1', 'category2']
+
 export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
   let categoryDefault = categoryNames[0]
   const [text, setText] = useState('');
@@ -34,7 +35,7 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
       id='taskFormSubmit'
       onClick={(event) => {
         event.preventDefault();
-       addTask(text, category); //todo add category to addTask
+       addTask(text, category); 
         setText('');
         setCategory(categoryDefault)
        }}
