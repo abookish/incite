@@ -9,9 +9,11 @@ interface Props {
 export const TaskList: React.FC<Props> = ({ tasks, toggleTodo }) => {
   return (
     <ul>
+      
       {tasks.map((task) => (
         <TaskListItem key={task.text} task={task} toggleTodo={toggleTodo} />
       ))}
+      
     </ul>
   );
 };

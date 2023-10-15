@@ -5,9 +5,10 @@ interface Props {
 
 const categoryNames = ['category1', 'category2']
 export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
+  let categoryDefault = categoryNames[0]
   const [text, setText] = useState('');
-  const [category, setCategory] = useState('');
-
+  const [category, setCategory] = useState(categoryDefault);
+  
   return (
     <form>
      <input type="text" //todo get smarter then improve this
@@ -20,7 +21,7 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
       id='taskCategorySelector'
       value = {category}
       onChange={(event) => {
-        setCategory(event.target.value);
+        setCategory(event.target.value)
       }}
   >
      {categoryNames.map((eachName) => (
@@ -33,8 +34,9 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
       id='taskFormSubmit'
       onClick={(event) => {
         event.preventDefault();
-        addTask(text); //todo add category to addTask
+       addTask(text, category); //todo add category to addTask
         setText('');
+        setCategory(categoryDefault)
        }}
       >Then do it </button>
       
