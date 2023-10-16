@@ -23,7 +23,7 @@ export default Title;
 export const Warning: FC<WarningProps> = ({ warningText }) => {
   return (
     <>
-      <h1  text-color = "red">{warningText}</h1>
+      <h1 style = {{color:"red"}}>{warningText}</h1>
     </>
   );
 };
