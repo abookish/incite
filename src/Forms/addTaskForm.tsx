@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { categoryNames } from '../taskCategories';
+import { categoryInfo } from '../taskCategories';
 interface Props {
     addTask: AddTask;
   }
 
-
 export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
-  let categoryDefault = categoryNames[0]
+  let categoryDefault = categoryInfo[0].codename
   const [text, setText] = useState('');
   const [category, setCategory] = useState(categoryDefault);
   
@@ -25,9 +24,9 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
         setCategory(event.target.value)
       }}
   >
-     {categoryNames.map((eachName) => (
-            <option value={eachName}>
-              {eachName}
+     {categoryInfo.map((category) => (
+            <option value={category.codename}>
+              {category.userFacingString}
             </option>
           ))}
   </select>

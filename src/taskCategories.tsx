@@ -1,6 +1,25 @@
 import React from 'react';
 import { TaskList } from './TaskList';
-export const categoryNames = ['category1', 'category2'] 
+
+  interface Category {
+    codename: string;
+    userFacingString: string;
+  }
+  export const categoryInfo: Category[]= [
+  {
+  codename: "lifeAdmin",
+  userFacingString:'Life Admin' 
+}, 
+ { 
+  codename: "soulGrowing", 
+  userFacingString: 'Soul Growing',
+ },
+ {
+  codename: "homeChores", 
+  userFacingString: 'Home Chores'
+ }
+
+]
 interface categoryProps {
     tasks: Task[];
     toggleTodo: ToggleTodo;
@@ -11,10 +30,10 @@ interface categoryProps {
   export const CategoryDiv: React.FC<categoryProps> = ({ tasks, toggleTodo}) => {
     return (
         <div>
-        {categoryNames.map((eachCategory) =>
-      <div id = {eachCategory}>
-    {`only ${eachCategory}`}
-    <TaskList tasks={getCategoryList(eachCategory,tasks)} toggleTodo={toggleTodo} />
+        {categoryInfo.map((eachCategory) => 
+      <div id = {eachCategory.codename} className = "categoryBox">
+    {`${eachCategory.userFacingString}`}
+    <TaskList tasks={getCategoryList(eachCategory.codename,tasks)} toggleTodo={toggleTodo} />
         
       </div>
         )}

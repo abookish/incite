@@ -11,8 +11,13 @@ export const TaskList: React.FC<Props> = ({ tasks, toggleTodo }) => {
     <ul>
       
       {tasks.map((task) => (
+        <div>
+        {`${task.category}`}
         <TaskListItem key={task.text} task={task} toggleTodo={toggleTodo} />
-      ))}
+        </div>
+     
+     
+     ))}
       
     </ul>
   );

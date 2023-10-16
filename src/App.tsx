@@ -4,7 +4,7 @@ import './App.css';
 import Title from './beautifulTitle';
 import { TaskList } from './TaskList';
 import { AddTaskForm } from './Forms/addTaskForm';
-import { getCategoryList, CategoryDiv, categoryNames } from './taskCategories';
+import {CategoryDiv } from './taskCategories';
 /*app todos:
 -hint text for text box
 -star toggle
