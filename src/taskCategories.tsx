@@ -1,6 +1,6 @@
 import React from 'react';
 import { TaskList } from './TaskList';
-
+//todo make catnames headers
   interface Category {
     codename: string;
     userFacingString: string;
@@ -32,7 +32,7 @@ interface categoryProps {
         <div>
         {categoryInfo.map((eachCategory) => 
       <div id = {eachCategory.codename} className = "categoryBox">
-    {`${eachCategory.userFacingString}`}
+    {`${eachCategory.userFacingString}`} 
     <TaskList tasks={getCategoryList(eachCategory.codename,tasks)} toggleTodo={toggleTodo} />
         
       </div>
