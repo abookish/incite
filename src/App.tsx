@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Title from './beautifulTitle';
+import Title, {Warning} from './beautifulTitle';
 import { TaskList } from './TaskList';
 import { AddTaskForm } from './Forms/addTaskForm';
 import {CategoryDiv } from './taskCategories';
@@ -38,6 +38,7 @@ function App() {
     setTodos([...tasks, newTask]);
   };
   return  <> 
+  <Warning warningText="WIP don't judge me"/>
    <Title title="let's motivate" subtitle = 'submerge  in the task'/>
     <CategoryDiv tasks={tasks} toggleTodo={toggleTodo}/>
     <AddTaskForm addTask={addTask}/>
