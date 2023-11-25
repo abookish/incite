@@ -34,9 +34,11 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
       id='taskFormSubmit'
       onClick={(event) => {
         event.preventDefault();
-       addTask(text, category); 
-        setText('');
-        setCategory(categoryDefault)
+        if (text){
+       addTask(text, category);
+       setText('');
+        } 
+        
        }}
       >Then do it </button>
       
