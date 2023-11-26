@@ -12,6 +12,14 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.categoriesBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+  margin: 2px;
+}
 
 .App-header {
   background-color: #282c34;
@@ -27,4 +35,6 @@
 .categoryBox {
   border-style: groove;
   border-width: 5px;
+  width: 90%;
+  text-align: left;
 }
