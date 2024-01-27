@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Title, {Warning} from './beautifulTitle';
-import { TaskList } from './TaskList';
+import { TaskList } from './taskBuilding/TaskList';
 import { AddTaskForm } from './Forms/addTaskForm';
-import {CategoryDiv } from './taskCategories';
+import {CategoryDiv } from './taskBuilding/taskCategories';
 /*app todos:
 -handle empties
 -hint text for text box

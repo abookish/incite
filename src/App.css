@@ -1,10 +1,20 @@
 .App {
   text-align: center;
+  background-color: var(--water);
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+:root {
+  /* from https://www.wikiart.org/en/claude-monet/water-lilies-40 */
+  --lilypadBlue: #9bb7c4;
+  --lilypadGreen: #5b7c3a;
+  --flowerPink: #a03140;
+  --reflectionGreen: #5b7c3a;
+  --signaturePurple: #742f28;
+  --water: #4a6a90;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,12 +24,16 @@
 }
 .categoriesBox {
   display: flex;
+  flex-direction: column;
+  border-style: dotted;
   justify-content: center;
   align-items: center;
   height: 80%;
-  width: 100%;
+  width: 80%;
   margin: 2px;
+  background-color: var(--lilypadBlue);
 }
+
 
 .App-header {
   background-color: #282c34;
@@ -35,6 +49,6 @@
 .categoryBox {
   border-style: groove;
   border-width: 5px;
-  width: 90%;
+  width: 80%;
   text-align: left;
 }

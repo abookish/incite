@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { categoryInfo } from '../taskCategories';
+import { categoryInfo } from '../taskBuilding/taskCategories';
 interface Props {
     addTask: AddTask;
   }
