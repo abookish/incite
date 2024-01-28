@@ -31,7 +31,7 @@ body{
   justify-content: center;
   align-items: center;
   height: 80%;
-  width: 100%;
+  width: 95%;
   margin: 2px;
   background-color:var(--water)!important;
 }
