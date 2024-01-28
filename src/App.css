@@ -3,8 +3,8 @@
 }
 
 
-:root {
-  /* from https://www.wikiart.org/en/claude-monet/water-lilies-40 */
+/* :root {
+  /* from https://www.wikiart.org/en/claude-monet/water-lilies-40 
   --lilypadBlue: #9bb7c4;
   --lilypadGreen: #5b7c3a;
   --flowerPink: #a03140;
@@ -13,7 +13,7 @@
   --water: #4a6a90;
   --lilyPink: #c79aba;
   --waterLighter: #798dde;
-}
+} */
 body{
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@ body{
   margin: 0;
   height: 100vh;
   width: 100%;
-  background-color: var(--waterLighter);
+  background-color: white;
 }
 
 .categoriesBox {
@@ -33,7 +33,7 @@ body{
   height: 80%;
   width: 95%;
   margin: 2px;
-  background-color:var(--water)!important;
+  background-color:blue;!important;
 }
 
 
@@ -54,7 +54,7 @@ body{
   width: 100%;
   height: 90%;
   text-align: left;
-  background-color: var(--lilypadGreen)!important;
+  background-color: green!important;
 }
 
 
