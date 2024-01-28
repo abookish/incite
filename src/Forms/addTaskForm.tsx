@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React, { useState } from 'react';
 import { categoryInfo } from '../taskBuilding/taskCategories';
 interface Props {
@@ -5,7 +6,7 @@ interface Props {
   }
 
 export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
-  let categoryDefault = categoryInfo[0].codename
+  const categoryDefault = categoryInfo[0].codename
   const [text, setText] = useState('');
   const [category, setCategory] = useState(categoryDefault);
   const promptText = "Decide what you are going to do" 
@@ -42,7 +43,6 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
        addTask(text, category);
        setText('');
         } 
-        
        }}
       >Then do it </button>
       

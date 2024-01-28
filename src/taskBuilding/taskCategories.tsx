@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React from 'react';
 import { TaskList } from './TaskList';
 //todo make catnames headers
