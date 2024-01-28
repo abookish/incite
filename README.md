@@ -5,6 +5,7 @@ a simple productivity app (work in progress)
 
 yarn start in repo, and then go to http://localhost:3000/
 
+cloud styling from: https://lauryndbrown.github.io/2017/06/08/creating-clouds-in-css.html
 with gratitude to 
 https://typeofnan.dev/your-first-react-typescript-project-todo-app/
 which got me started

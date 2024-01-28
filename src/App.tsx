@@ -8,6 +8,9 @@ import {CategoryDiv } from './taskBuilding/taskCategories';
 /*app todos:
 -handle empties
 -hint text for text box
+-prettier colors
+-round boxes
+-linter
 -star toggle
 -star section
 -cat names
@@ -15,7 +18,6 @@ import {CategoryDiv } from './taskBuilding/taskCategories';
 -make it pretty
   -smaller sections, hide sections
 */
-//todo get rid of
 const startingList: Task[] = [];
 
 function App() { 
