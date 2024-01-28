@@ -26,6 +26,7 @@ body{
 
 .categoriesBox {
   display: flex;
+  flex: auto;
   flex-direction: column;
   border-style: dotted;
   justify-content: center;
