@@ -16,6 +16,7 @@
 } */
 body{
   display: flex;
+  flex: auto;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -52,7 +53,7 @@ body{
 .categoryBox {
   border-style: groove;
   border-width: 5px;
-  width: 100%;
+  width: 90%;
   height: 90%;
   text-align: left;
   background-color: green!important;
