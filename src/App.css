@@ -39,16 +39,9 @@ body{
 }
 
 .categoriesBox {
-  flex-direction: column;
-  border-style: dotted;
   height: 75%;
   width: 75%;
   padding: 15%;
-  display: flex;
-  margin:0;
-  justify-content: center;
-  align-items: center;
-  resize: both;
   background-color:var(--lilypadShadow)!important;
 }
 
@@ -65,11 +58,7 @@ body{
   color: white !important;
 }
 
-.categoryBox {
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.greenBox {
   border-style: groove;
   border-color: var(--lilypadOutline);
   width: 95%;

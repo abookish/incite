@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Title, {Warning} from './beautifulTitle';
-import { TaskList } from './taskBuilding/TaskList';
 import { AddTaskForm } from './Forms/addTaskForm';
 import {CategoryDiv } from './taskBuilding/taskCategories';
+import { ContainerBox } from './taskBuilding/ContainerBox';
 /*app todos:
 -handle empties
 -hint text for text box
@@ -42,9 +42,10 @@ function App() {
   };
   return  <> 
    <Title title="let's motivate" subtitle = 'submerge  in the task'/>
-   <div className="categoriesBox">
-    <CategoryDiv tasks={tasks} toggleTodo={toggleTodo}/>
-    </div>
+   <ContainerBox>
+      <CategoryDiv tasks={tasks} toggleTodo={toggleTodo} />
+    </ContainerBox>
+
     <AddTaskForm addTask={addTask}/>
   </>
 }
