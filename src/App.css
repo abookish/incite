@@ -48,7 +48,9 @@ body{
   resize: both;
   background-color: var(--lilypadLight)!important;
 }
-
+.root{
+  width:100%
+}
 .App-header {
   background-color: var(--cloudGray);
   display: flex;
