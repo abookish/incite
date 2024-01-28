@@ -5,18 +5,14 @@ import Title, {Warning} from './beautifulTitle';
 import { AddTaskForm } from './Forms/addTaskForm';
 import {CategoryDiv } from './taskBuilding/taskCategories';
 import { ContainerBox } from './taskBuilding/ContainerBox';
+import { SectionHeader } from './beautifulTitle';
 /*app todos:
 -handle empties
--hint text for text box
--prettier colors
 -round boxes
 -linter
 -star toggle
 -star section
--cat names
 -app icon
--make it pretty
-  -smaller sections, hide sections
 */
 const startingList: Task[] = [];
 
@@ -41,12 +37,12 @@ function App() {
     setTodos([...tasks, newTask]);
   };
   return  <> 
-   <Title title="let's motivate" subtitle = 'submerge  in the task'/>
+   <Title title="let's motivate"/>
+   <AddTaskForm addTask={addTask}/>
    <ContainerBox>
+   <SectionHeader headerName='submerge in the task'/>
       <CategoryDiv tasks={tasks} toggleTodo={toggleTodo} />
     </ContainerBox>
-
-    <AddTaskForm addTask={addTask}/>
   </>
 }
 

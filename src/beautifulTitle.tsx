@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
-//cloud styling from https://lauryndbrown.github.io/2017/06/08/creating-clouds-in-css.html
 interface TitleProps {
   title: string;
   subtitle?:string;
+}
+interface SectionHeaderProps {
+  headerName:string;
 }
 interface WarningProps {
   warningText: string;
@@ -20,6 +22,15 @@ const Title: FC<TitleProps> = ({ title, subtitle }) => {
 };
 
 export default Title;
+
+export const SectionHeader: FC<SectionHeaderProps> = ({ headerName }) => { 
+  return (
+ <div className = 'sectionHeader'>
+      <h3>{headerName}</h3>
+      </div>
+  );
+};
+
 
 export const Warning: FC<WarningProps> = ({ warningText }) => {
   return (
