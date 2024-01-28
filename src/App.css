@@ -11,6 +11,19 @@
   --water: #4a6a90;
   --lilyPink: #c79aba;
   --waterLighter: #798dde;
+/*other picture 
+https://en.wikipedia.org/wiki/Water_Lilies_(Monet_series)#/media/File:Water_Lilies_by_Claude_Monet,_Fondation_Beyeler_03.2.JPG
+https://en.wikipedia.org/wiki/Water_Lilies_(Monet_series)#/media/File:Monet_w1897.jpg*/
+--lilypadShadow: #3f4d1a;
+--waterLight: #b5bfd8;
+--lilypadLight: #b0b378;
+--flowerPurple: #b499ab;
+--cloudPink: #dac6bb;
+--cloudGray: #ddd3d1;
+--lilypadOutline: #484d14;
+--flowerRed: #5e291c;
+
+
 }
 
 body{
@@ -20,7 +33,10 @@ body{
   margin: 0;
   height: 100vh;
   width: 100%;
-  background-color: var(--water);
+  background-image:url('./waterCloseUp.jpg');
+  background-repeat: repeat;
+  background-position: center;
+  /* background-color: var(--waterLight); */
 }
 
 .categoriesBox {
@@ -34,12 +50,12 @@ body{
   justify-content: center;
   align-items: center;
   resize: both;
-  background-color:var(--waterLighter)!important;
+  background-color:var(--lilypadShadow)!important;
 }
 
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--cloudGray);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,10 +72,11 @@ body{
   justify-content: center;
   align-items: center;
   border-style: groove;
+  border-color: var(--lilypadOutline);
   width: 95%;
   padding: 20px;
   resize: both;
-  background-color: var(--lilypadGreen)!important;
+  background-color: var(--lilypadLight)!important;
 }
 
 
