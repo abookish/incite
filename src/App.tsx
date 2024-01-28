@@ -36,13 +36,11 @@ function App() {
     });
     setTodos(newTasks);
   };
-  
   const addTask: AddTask = (text: string, category?: string | null) => {
     const newTask = { text, complete: false, category};
     setTodos([...tasks, newTask]);
   };
   return  <> 
-  <Warning warningText="WIP don't judge me"/>
    <Title title="let's motivate" subtitle = 'submerge  in the task'/>
    <div className="categoriesBox">
     <CategoryDiv tasks={tasks} toggleTodo={toggleTodo}/>
