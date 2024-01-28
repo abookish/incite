@@ -8,12 +8,15 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
   let categoryDefault = categoryInfo[0].codename
   const [text, setText] = useState('');
   const [category, setCategory] = useState(categoryDefault);
-  
+  const promptText = "Decide what you are going to do" 
+  const taskBoxId = 'taskTextBox'
   return (
     <form>
-      <label htmlFor="taskTextBox">Decide what you are going to do </label>
-     <input type="text" //todo get smarter then improve this
-        id ='taskTextBox'
+      <label htmlFor="taskTextBox"></label>
+     <input type="text" 
+        id ={taskBoxId}
+        aria-label={taskBoxId + promptText}
+        placeholder = {promptText}
         value={text}
         onChange={(event) => {
           setText(event.target.value);
