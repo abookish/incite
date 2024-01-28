@@ -12,16 +12,7 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
   const taskBoxId = 'taskTextBox'
   return (
     <form>
-      <label htmlFor="taskTextBox"></label>
-     <input type="text" 
-        id ={taskBoxId}
-        aria-label={taskBoxId + promptText}
-        placeholder = {promptText}
-        value={text}
-        onChange={(event) => {
-          setText(event.target.value);
-        }}/>
-     <select 
+      <select 
       id='taskCategorySelector'
       value = {category}
       onChange={(event) => {
@@ -34,6 +25,15 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
             </option>
           ))}
   </select>
+      <label htmlFor="taskTextBox"></label>
+     <input type="text" 
+        id ={taskBoxId}
+        aria-label={taskBoxId + promptText}
+        placeholder = {promptText}
+        value={text}
+        onChange={(event) => {
+          setText(event.target.value);
+        }}/>
      <button type="submit" 
       id='taskFormSubmit'
       onClick={(event) => {
