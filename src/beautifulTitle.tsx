@@ -9,12 +9,12 @@ interface WarningProps {
 }
 
  
-const Title: FC<TitleProps> = ({ title, subtitle }) => { //todo make cloud its own react component
+const Title: FC<TitleProps> = ({ title, subtitle }) => { 
   return (
- <>
+ <div className = 'App-header'>
       <h2>{title}</h2>
       <h3>{subtitle}</h3>
-      </>
+      </div>
     
   );
 };

@@ -11,6 +11,7 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
   
   return (
     <form>
+      <label htmlFor="taskTextBox">Decide what you are going to do </label>
      <input type="text" //todo get smarter then improve this
         id ='taskTextBox'
         value={text}
