@@ -5,19 +5,12 @@ import { AddTaskForm } from './Forms/addTaskForm';
 import {CategoryDiv } from './taskBuilding/taskCategories';
 import { ContainerBox } from './taskBuilding/ContainerBox';
 import { SectionHeader } from './beautifulTitle';
-/*app todos:
--handle empties
--round boxes
--linter
--star toggle
--star section
-*/
+
 const startingList: Task[] = [];
 
 function App() { 
   
   const [tasks, setTodos] = useState(startingList);
-//toggle function todo abstract
   const toggleTodo = (selectedTodo: Task) => {
     const newTasks = tasks.map((task: Task) => {
       if (task === selectedTodo) {
