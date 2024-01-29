@@ -7,14 +7,14 @@ import { TaskList } from './TaskList';
     userFacingString: string;
   }
   export const categoryInfo: Category[]= [
-  {
+    { 
+      codename: "soulGrowing", 
+      userFacingString: 'Soul Growing',
+     },
+    {
   codename: "lifeAdmin",
   userFacingString:'Life Admin' 
 }, 
- { 
-  codename: "soulGrowing", 
-  userFacingString: 'Soul Growing',
- },
  {
   codename: "homeChores", 
   userFacingString: 'Home Chores'

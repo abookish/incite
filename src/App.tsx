@@ -12,7 +12,6 @@ import { SectionHeader } from './beautifulTitle';
 -linter
 -star toggle
 -star section
--app icon
 */
 const startingList: Task[] = [];
 
