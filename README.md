@@ -1,5 +1,5 @@
 # motivate
-a simple productivity app (work in progress)
+a simple todo list app
 
 
 
