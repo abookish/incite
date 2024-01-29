@@ -9,12 +9,22 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
   const categoryDefault = categoryInfo[0].codename
   const [text, setText] = useState('');
   const [category, setCategory] = useState(categoryDefault);
-  const promptText = "Decide what you are going to do" 
+  const promptText = "What are you going to do?" 
   const taskBoxId = 'taskTextBox'
   return (
     <form>
-      <select 
+      <label htmlFor="taskTextBox"></label>
+     <input type="text" 
+        id ={taskBoxId}
+        aria-label={taskBoxId + promptText}
+        placeholder = {promptText}
+        value={text}
+        onChange={(event) => {
+          setText(event.target.value);
+        }}/>
+        <select 
       id='taskCategorySelector'
+      placeholder = "Categorize"
       value = {category}
       onChange={(event) => {
         setCategory(event.target.value)
@@ -26,15 +36,6 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
             </option>
           ))}
   </select>
-      <label htmlFor="taskTextBox"></label>
-     <input type="text" 
-        id ={taskBoxId}
-        aria-label={taskBoxId + promptText}
-        placeholder = {promptText}
-        value={text}
-        onChange={(event) => {
-          setText(event.target.value);
-        }}/>
      <button type="submit" 
       id='taskFormSubmit'
       onClick={(event) => {
@@ -44,7 +45,7 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
        setText('');
         } 
        }}
-      >Then do it </button>
+      >Keep it </button>
       
     </form>
   );

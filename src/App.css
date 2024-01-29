@@ -49,17 +49,19 @@ body{
   background-color: var(--lilypadLight)!important;
 }
 .root{
-  width:100%
+  width:100%;
 }
 .App-header {
   background-color: var(--cloudGray);
+  border-color: var(--cloudPink);
+  border-width: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 20%;
+  width: 95%;
+  padding-left: 20%;
+  padding-right: 20%;
   flex-direction: column;
-  margin: 2%;
 }
 h2{
   color: var(--flowerRed);
@@ -70,10 +72,11 @@ h2{
   background-color: var(--lilypadShadow)!important;
 
 }
+#taskTextBox{
+  width: 65%
+}
 form{
-  width: 95%;
-  padding-left: 20%;
-  padding-right: 20%;
+  width: 100%;
 }
 
 
