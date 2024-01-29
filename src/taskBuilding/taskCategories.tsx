@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from 'react';
 import { TaskList } from './TaskList';
 //todo make catnames headers
@@ -10,7 +9,7 @@ import { TaskList } from './TaskList';
     { 
       codename: "soulGrowing", 
       userFacingString: 'Soul Growing',
-     },
+     }, 
     {
   codename: "lifeAdmin",
   userFacingString:'Life Admin' 
@@ -32,7 +31,7 @@ interface categoryProps {
     return (
         <>
         {categoryInfo.map((eachCategory) => 
-      <div id = {eachCategory.codename} className = "categoryBox">
+      <div id = {eachCategory.codename} key = {eachCategory.codename} className = "categoryBox">
     {`${eachCategory.userFacingString}`} 
     <TaskList tasks={getCategoryList(eachCategory.codename,tasks)} toggleTodo={toggleTodo} />
         

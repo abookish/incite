@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React, {ReactNode} from 'react';
   interface ContainerBoxProps {
     children: ReactNode;

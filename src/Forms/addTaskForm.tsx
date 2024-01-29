@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React, { useState } from 'react';
 import { categoryInfo } from '../taskBuilding/taskCategories';
 interface Props {
@@ -15,14 +14,13 @@ export const AddTaskForm: React.FC<Props> = ({ addTask }) => {
     <form>
       <select 
       id='taskCategorySelector'
-      placeholder = "Categorize"
       value = {category}
       onChange={(event) => {
         setCategory(event.target.value)
       }}
   >
      {categoryInfo.map((category) => (
-            <option value={category.codename}>
+            <option key = {category.codename} value={category.codename}>
               {category.userFacingString}
             </option>
           ))}

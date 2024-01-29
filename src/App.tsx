@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Title, {Warning} from './beautifulTitle';
+import Title from './beautifulTitle';
 import { AddTaskForm } from './Forms/addTaskForm';
 import {CategoryDiv } from './taskBuilding/taskCategories';
 import { ContainerBox } from './taskBuilding/ContainerBox';
