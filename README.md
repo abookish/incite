@@ -1,11 +1,14 @@
 # motivate
 a simple todo list app
 
+You can use it on the web at 
+https://abookish-motivate.vercel.app/
+![image](https://github.com/user-attachments/assets/c7e7b43b-d386-4a5a-a528-1bd78db97546)
 
 
-yarn start in repo, and then go to http://localhost:3000/
 
-cloud styling from: https://lauryndbrown.github.io/2017/06/08/creating-clouds-in-css.html
+OR clone the repo, yarn start and then go to http://localhost:3000/
+
 with gratitude to 
 https://typeofnan.dev/your-first-react-typescript-project-todo-app/
 which got me started
