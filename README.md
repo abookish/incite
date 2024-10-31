@@ -1,8 +1,8 @@
-# motivate
+# incite
 a simple todo list app
 
 You can use it on the web at 
-https://abookish-motivate.vercel.app/
+https://abookish-incite.vercel.app/
 ![image](https://github.com/user-attachments/assets/c7e7b43b-d386-4a5a-a528-1bd78db97546)
 
 
